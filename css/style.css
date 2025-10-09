@@ -1,0 +1,393 @@
+/* Fonts import  */
+/* variables */
+:root {
+  --bg: #171a1b;
+  --panel: #1e2326;
+  --muted: #252a2e;
+  --accent: #1cb698;
+  --text: #ffffff;
+}
+
+/* reset y tipografías */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Work Sans", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  padding-top: 72px; /* espacio para header fijo */
+}
+
+/* HEADER */
+.contenedor-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 120;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 20px;
+  background: transparent;
+}
+.header-inner {
+  width: 1100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 40px;
+  padding: 8px 20px;
+  border: 3px solid var(--accent);
+  background: rgba(30, 35, 38, 0.15);
+  backdrop-filter: blur(6px);
+}
+.header-inner .logo {
+  font-family: "Righteous", sans-serif;
+  color: var(--accent);
+  font-size: 28px;
+  letter-spacing: 2px;
+}
+.header-inner nav ul {
+  display: flex;
+  gap: 18px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.header-inner nav ul li a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  opacity: 0.95;
+}
+.header-inner nav ul li a:hover {
+  color: var(--accent);
+}
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: 0;
+  color: var(--text);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* LAYOUT: sidebar + main */
+.page {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 300px;
+  min-height: calc(100vh - 120px);
+  padding: 20px;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.avatar-wrap {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  padding: 8px;
+  border: 8px solid var(--accent);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.name {
+  font-family: "Righteous", sans-serif;
+  font-size: 22px;
+  margin: 8px 0;
+  text-align: center;
+}
+.role {
+  font-size: 13px;
+  color: #cfcfcf;
+  margin-bottom: 18px;
+}
+.socials {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.socials a {
+  color: var(--text);
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: transparent;
+  border-radius: 50%;
+}
+.btn-cv {
+  display: inline-block;
+  padding: 10px 18px;
+  border: 1px solid #ddd;
+  color: var(--text);
+  text-decoration: none;
+  margin-top: 10px;
+  border-radius: 6px;
+  background: transparent;
+}
+
+/* MAIN CONTENT */
+.main {
+  flex: 1;
+  padding-bottom: 60px;
+}
+
+/* Cards */
+.card {
+  background: linear-gradient(
+    to top,
+    rgba(30, 35, 38, 0.95),
+    rgba(30, 35, 38, 0.95)
+  );
+  border-radius: 24px;
+  padding: 22px;
+  margin-bottom: 24px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+/* Sobre mi */
+.sobremi h2 {
+  font-family: "Righteous", sans-serif;
+  color: var(--accent);
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+.sobremi p {
+  font-size: 15px;
+}
+
+/* Info row: datos + intereses */
+.info-row {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.datos {
+  flex: 1 1 55%;
+}
+.intereses-card {
+}
+
+/* Datos personales list */
+.datos h3 {
+  font-family: "Righteous", sans-serif;
+  color: var(--accent);
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+.datos-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.datos-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 10px 0;
+  font-size: 15px;
+}
+.datos-list i {
+  color: var(--accent);
+  font-size: 18px;
+}
+
+/* Intereses card */
+.intereses-card {
+  flex: 1 1 40%;
+}
+.intereses-card h3 {
+  font-family: "Righteous", sans-serif;
+  color: var(--accent);
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+.contenedor-intereses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.intereses {
+  width: 100px;
+  height: 100px;
+  background: var(--muted);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-align: center;
+  padding: 10px;
+}
+.intereses i {
+  font-size: 24px;
+  color: var(--text);
+}
+.intereses span {
+  font-size: 13px;
+}
+
+/* Portafolio grid */
+.proyectos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 12px;
+}
+.proyecto-card {
+  background: var(--muted);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 12px;
+  transition: background 0.3s, transform 0.3s;
+}
+.proyecto-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.proyecto-card:hover {
+  background: var(--accent);
+  transform: translateY(-4px);
+}
+
+.proyecto-card:hover h4,
+.proyecto-card:hover p,
+.proyecto-card:hover a {
+  color: #fff;
+}
+
+/* Footer / contacto form */
+.contacto form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contacto input,
+.contacto textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background: #0f1111;
+  color: #fff;
+}
+
+/* Asegurar que Font Awesome use su propia fuente (important para que los iconos se vean) */
+.fa,
+.fas,
+.far,
+.fab {
+  font-family: "Font Awesome 6 Free" !important;
+  font-weight: 900 !important;
+}
+
+/* ----------------- RESPONSIVE ----------------- */
+
+/* tablets */
+@media (max-width: 1024px) {
+  .header-inner {
+    width: 95%;
+  }
+  .sidebar {
+    width: 260px;
+  }
+  .page {
+    gap: 20px;
+  }
+}
+
+/* móviles */
+@media (max-width: 768px) {
+  .header-inner nav {
+    display: none;
+  }
+  .nav-toggle {
+    display: block;
+  }
+  .page {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .sidebar {
+    width: 100%;
+    order: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    padding: 14px;
+  }
+  .avatar-wrap {
+    width: 110px;
+    height: 110px;
+    border-width: 6px;
+  }
+  .name {
+    font-size: 18px;
+  }
+  .main {
+    width: 100%;
+  }
+  .info-row {
+    flex-direction: column;
+  }
+  .datos,
+  .intereses-card {
+    width: 100%;
+  }
+  .contenedor-intereses {
+    justify-content: center;
+  }
+}
+
+/* celulares pequeños */
+@media (max-width: 480px) {
+  .header-inner {
+    padding: 6px;
+  }
+  .header-inner .logo {
+    font-size: 20px;
+  }
+  .sobremi h2 {
+    font-size: 22px;
+  }
+  .datos-list li {
+    font-size: 14px;
+  }
+}
