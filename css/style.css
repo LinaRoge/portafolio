@@ -264,9 +264,8 @@ body {
 /* Portafolio grid */
 .proyectos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 16px;
-  margin-top: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
 }
 .proyecto-card {
   background: var(--muted);
@@ -274,6 +273,10 @@ body {
   overflow: hidden;
   padding: 12px;
   transition: background 0.3s, transform 0.3s;
+}
+.proyecto img {
+  width: 100%;
+  border-radius: 10px;
 }
 .proyecto-card img {
   width: 100%;
