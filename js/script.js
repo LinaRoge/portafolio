@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+HEAD;
 // hamburguesa
 const btn = document.querySelector(".nav-toggle");
 const nav = document.querySelector(".header-inner nav");
