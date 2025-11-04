@@ -260,6 +260,26 @@ body {
 .intereses span {
   font-size: 13px;
 }
+/* Animación al pasar el mouse */
+.intereses {
+  transition: transform 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+}
+
+.intereses:hover {
+  background: var(--accent);
+  transform: translateY(-5px) scale(1.05);
+}
+
+.intereses:hover i {
+  color: #fff;
+  transform: rotate(10deg);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.intereses:hover span {
+  color: #fff;
+}
 
 /* Portafolio grid */
 .proyectos-grid {
